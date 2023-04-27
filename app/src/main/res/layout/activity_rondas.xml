@@ -1,0 +1,330 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Shielder Ronda"
+            app:titleTextAppearance="@style/topAppBarTitle"
+            style="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+            app:logo="@mipmap/ic_launcher_foreground"
+
+            >
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBarLayout"
+        android:layout_above="@id/imageView10"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="0dp"
+        app:cardBackgroundColor="@color/white"
+        style="@style/Widget.App.CardView"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/lightSteelBlue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/mapRonda"
+                android:name="com.example.location_tracker_shielder.RondasActivity"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_above="@id/cardCond"
+                tools:ignore="Instantiatable" />
+            <!-- Media -->
+                <!-- Title, secondary and supporting text -->
+            <TextView
+                android:id="@+id/horaRondaA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/nomeRondaA"
+                android:layout_marginTop="8dp"
+                android:paddingStart="@dimen/fab_margin"
+                android:text="Horario Ronda"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/nomeRondaA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/descricaoRondaA"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:paddingStart="@dimen/fab_margin"
+                android:text="Nome Ronda"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/AshGrey"
+                android:layout_above="@id/horaRondaA"
+                android:layout_marginBottom="@dimen/fab_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/nomeCondA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="1dp"
+                        android:text="Nome Cond"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="@color/black" />
+            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/descricaoRondaA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/funcaoRondaA"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:paddingStart="@dimen/fab_margin"
+                android:text="Descricao Ronda"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="10dp" />
+
+            <!-- Buttons -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_backRonda"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:text="voltar"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_iniciaRonda"
+                style="?attr/materialButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/btn_backRonda"
+                android:text="Iniciar Ronda"
+                android:layout_marginEnd="@dimen/fab_margin"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/fimRondaA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/horaRondaA"
+                android:layout_alignParentRight="true"
+                android:paddingEnd="@dimen/fab_margin"
+                android:text="Horario Ronda"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/funcaoRondaA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/btn_backRonda"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:padding="1dp"
+                android:paddingStart="@dimen/fab_margin"
+                android:text="Funcao Ronda"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="1dp" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="128dp"
+        android:layout_height="31dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/shielder_text_blue" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/logoutFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:contentDescription="LogoutButton"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:backgroundTint="@color/royalBlue"
+        app:fabSize="mini"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</RelativeLayout>
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/frameLayout"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/white"-->
+<!--    tools:context=".RondasActivity">-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="336dp"-->
+<!--        android:layout_height="647dp"-->
+<!--        app:cardBackgroundColor="@color/lightSkyBlue"-->
+<!--        app:cardCornerRadius="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.494"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.23">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="612dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:orientation="vertical">-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/nomeRondaA"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="Nome Ronda"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="30dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/nomeCondA"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:text="Nome Condomínio"-->
+<!--                android:textSize="20dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/horaRondaA"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:text="Hora Ronda"-->
+<!--                android:textSize="20dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/descriçãoRondaA"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:text="Descrição Ronda"-->
+<!--                android:textSize="20dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/funcaoRondaA"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:text="Função Ronda"-->
+<!--                android:textSize="20dp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/iniciarRondaButton"-->
+<!--                android:layout_width="124dp"-->
+<!--                android:layout_height="66dp"-->
+<!--                android:layout_marginLeft="168dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:text="Iniciar Ronda"-->
+<!--                android:background="@drawable/button_shape_round"/>-->
+
+<!--            <fragment-->
+<!--                android:id="@+id/mapRonda"-->
+<!--                android:name="com.example.location_tracker_shielder.RondasActivity"-->
+<!--                class="com.google.android.gms.maps.SupportMapFragment"-->
+<!--                android:layout_width="261dp"-->
+<!--                android:layout_height="264dp"-->
+<!--                android:layout_marginLeft="37dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:scrollbars="vertical"-->
+<!--                tools:ignore="Instantiatable" />-->
+
+<!--            &lt;!&ndash;        <fragment&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:id="@+id/mapRonda"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:name="com.google.android.gms.maps.SupportMapFragment"&ndash;&gt;-->
+<!--            &lt;!&ndash;            xmlns:map="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+<!--            &lt;!&ndash;            class="com.google.android.gms.maps.SupportMapFragment"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:layout_height="308dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:layout_marginLeft="10dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:layout_marginTop="10dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:layout_marginRight="10dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:layout_marginBottom="10dp" />&ndash;&gt;-->
+
+<!--        </LinearLayout>-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView7"-->
+<!--        android:layout_width="132dp"-->
+<!--        android:layout_height="27dp"-->
+<!--        android:src="@drawable/shielder_text_blue"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="1.0" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView8"-->
+<!--        android:layout_width="44dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:src="@drawable/ic_launcher_small"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.961" />-->
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

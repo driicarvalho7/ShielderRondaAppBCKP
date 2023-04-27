@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "804028560152",
+    "project_id": "location-tracker-shielder",
+    "storage_bucket": "location-tracker-shielder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804028560152:android:791c5d8b56990d1caf646d",
+        "android_client_info": {
+          "package_name": "com.example.location_tracker_shielder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804028560152-2stv5eak8enno593m6bo2j48pk5tp7gl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ1zhyowNLUj0Wga4Fqagp2aZFdeMOjGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804028560152-2stv5eak8enno593m6bo2j48pk5tp7gl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,134 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        style="@style/Widget.App.CardView"
+        app:cardBackgroundColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="0dp"
+        android:outlineSpotShadowColor="@color/black"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeRonda"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRonda"
+                android:layout_below="@id/cardCond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/fab_margin"
+                        android:paddingTop="@dimen/fab_margin"
+                        android:paddingBottom="8dp"
+                        android:layout_toLeftOf="@id/btn_selecionaRonda"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true">
+
+                        <TextView
+                            android:id="@+id/horaRondaA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hora Começo"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/nomeRondaA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:autoSizeTextType="uniform"
+                            android:text="Nome Ronda"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/fimRondaA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/linearLayout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:layout_marginEnd="@dimen/fab_margin"
+                        android:text="Hora Fim"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="10dp" />
+
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        style="?attr/materialButtonStyle"
+                        android:id="@+id/btn_selecionaRonda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linearLayout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/fab_margin"
+                        android:text="selecionar"
+                        android:textSize="10dp">
+
+                    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/AshGrey"
+                android:layout_alignParentTop="true"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/nomeCondA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="Nome Cond"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardCond"
+                android:paddingTop="@dimen/fab_margin"
+                >
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
